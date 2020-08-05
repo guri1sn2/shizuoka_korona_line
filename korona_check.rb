@@ -24,12 +24,12 @@ contents.xpath('//h1').each do |tr|
 end
 
 # textファイル（設定ファイル）の読み込み
-f = File.open("config.txt")
+f = File.open("/Users/totsukashouta/Desktop/korona/config.txt")
 s = f.read
 
 # ファイルの書き込み
 def txt_write(content)
-  File.open("config.txt", mode = "w") {|f|
+  File.open("/Users/totsukashouta/Desktop/korona/config.txt", mode = "w") {|f|
     f.write(content)
   }
 end
@@ -72,7 +72,7 @@ class LineNotify
 end
 
 # 出力（更新されていた場合、txtファイルの書き換えを行う）
-if list[1] != s
+if s != list[1]
   LineNotify.send("\n" + "【更新】#{list[1]}" + "\n" + "#{url}")
   txt_write(list[1])
 end
