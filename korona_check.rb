@@ -38,7 +38,7 @@ end
 # トークン qXSplrDzc8FQeKhyRYaAzZ2rVfzbp2NlkrNTDZTax4E
 
 class LineNotify
-  TOKEN = 'qXSplrDzc8FQeKhyRYaAzZ2rVfzbp2NlkrNTDZTax4E'.freeze
+  TOKEN = 'tokenを記載'.freeze
   URL = 'https://notify-api.line.me/api/notify'.freeze
 
   attr_reader :message
